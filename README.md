@@ -37,33 +37,33 @@ fabric -U
 
 The repository includes utility scripts for managing Fabric configuration files.
 
-#### Using update.sh
+#### Using fabric-sync.sh
 
-The `update.sh` script helps install patterns and strategies to your Fabric configuration.
+The `fabric-sync.sh` script helps install patterns and strategies to your Fabric configuration.
 
 ```bash
 # Clone this repository
-git clone https://github.com/tmsdnl/fabric.git
-cd fabric
+git clone https://github.com/tmsdnl/fabric-patterns.git
+cd fabric-patterns
 
 # Copy all patterns to ~/.config/fabric
-./update.sh
+./fabric-sync.sh
 
 # Get help information
-./update.sh --help
+./fabric-sync.sh --help
 ```
 
 #### Selective Updates
 
 ```bash
 # Copy only the patterns directory
-./update.sh patterns
+./fabric-sync.sh patterns
 
 # Copy specific files
-./update.sh patterns/create_recognition/system.md
+./fabric-sync.sh patterns/create_recognition/system.md
 
 # Copy multiple items
-./update.sh patterns strategies
+./fabric-sync.sh patterns strategies
 ```
 
 #### Using create.sh
@@ -115,6 +115,8 @@ fabric -r create_recognition -i "Engineer's name and achievements..."
 ## Available Patterns
 
 - **create_recognition**: Helps craft thoughtful recognition statements for engineers based on their contributions and impact
+- **content_classifier**: Classifies content into various categories to help with organization and understanding
+- **summarize_topics**: Analyzes text to identify and summarize multiple topics or provide a structured summary of a single topic
 
 ## Contributing
 
