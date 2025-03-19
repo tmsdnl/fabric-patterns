@@ -33,11 +33,13 @@ ls ~/.config/fabric/patterns
 fabric -U
 ```
 
-### Option 2: Manual Setup with update.sh
+### Option 2: Manual Setup with Included Scripts
 
-The repository includes an `update.sh` script for directly managing Fabric configuration files.
+The repository includes utility scripts for managing Fabric configuration files.
 
-#### Basic Usage
+#### Using update.sh
+
+The `update.sh` script helps install patterns and strategies to your Fabric configuration.
 
 ```bash
 # Clone this repository
@@ -64,6 +66,24 @@ cd fabric
 ./update.sh patterns strategies
 ```
 
+#### Using create.sh
+
+The `create.sh` script helps create new patterns or strategies from templates.
+
+```bash
+# Create a new pattern (will prompt for name)
+./create.sh pattern
+
+# Create a new pattern with specified name
+./create.sh pattern "Code Review"
+
+# Create a new strategy
+./create.sh strategy "Custom Strategy"
+
+# Get help information
+./create.sh --help
+```
+
 ## Usage
 
 ### Using Custom Patterns
@@ -82,6 +102,10 @@ fabric -r create_recognition -i "Engineer's name and achievements..."
 ### Features
 
 - **Specialized Patterns**: Custom patterns for specific use cases like technical recognition
+- **Create Script Features**:
+  - **Easy creation**: Quickly create new patterns or strategies with proper naming
+  - **Template-based**: Uses Fabric's official templates as starting points
+  - **Naming convention**: Automatically formats names with underscores
 - **Update Script Features**:
   - **Preview changes**: See exactly what will be created, updated, or left unchanged
   - **Confirmation**: Asks for confirmation before making any changes
