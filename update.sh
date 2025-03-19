@@ -16,10 +16,7 @@ unchanged=()
 check_changes() {
   local src="$1"
   local dst="$2"
-  # Use global arrays
-  to_create=()
-  to_update=()
-  unchanged=()
+  # Note: We're not resetting the arrays here anymore, they should be reset before calling this function
   
   # For directories, check each file inside
   if [ -d "$src" ]; then
